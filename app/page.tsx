@@ -1,5 +1,7 @@
 "use client";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 import { Fragment, useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Lottie from "lottie-react";
@@ -260,7 +262,7 @@ function Hero() {
         >
           <div className="hero-frame">
             <video
-              poster="/hero-mockup.png"
+              poster={`${BASE}/hero-mockup.png`}
               muted
               playsInline
               loop
@@ -279,7 +281,7 @@ function Hero() {
                 v.load();
               }}
             >
-              <source src="/hero-demo.mp4" type="video/mp4" />
+              <source src={`${BASE}/hero-demo.mp4`} type="video/mp4" />
             </video>
           </div>
         </div>
@@ -494,7 +496,7 @@ function SubHero() {
           ref={ref}
           className="mx-auto w-full rounded-[28px] overflow-hidden flex items-center gap-6 px-10 py-10"
           style={{
-            backgroundImage: "url('/subhero bg.png')",
+            backgroundImage: `url('${BASE}/subhero bg.png')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -708,7 +710,7 @@ function Features() {
               body: "The extension detects each post as it loads on any Facebook profile, pulling the engagement data, post type, caption, and date automatically, without you clicking a single button.",
               img: "/Auto-capture.png",
               imgAlt: "Auto-capture feature",
-              lottie: "/Auto-capture.json",
+              lottie: `${BASE}/Auto-capture.json`,
               lottieClass: "w-[68%]",
             },
             {
@@ -717,7 +719,7 @@ function Features() {
               body: "Export any profile to the dashboard and rank posts by likes, comments, shares, or video plays, so the best-performing content surfaces immediately instead of staying buried.",
               img: "/Push to dashboard.png",
               imgAlt: "Push to dashboard feature",
-              lottie: "/Push-to-dashboard.json",
+              lottie: `${BASE}/Push-to-dashboard.json`,
             },
             {
               tag: "Viral intel",
@@ -725,7 +727,7 @@ function Features() {
               body: "See which posts blew up far beyond a creator's normal numbers. The Discovery feed pulls outliers from every profile you've tracked, giving you a live window into exactly what Facebook is rewarding right now — updated constantly.",
               img: "/Viral intel.png",
               imgAlt: "Viral intel feature",
-              lottie: "/viral-intel.json",
+              lottie: `${BASE}/viral-intel.json`,
               lottieClass: "w-[80%]",
             },
             {
@@ -735,7 +737,7 @@ function Features() {
               body: "Download any profile's post data as JSON, Markdown, or Excel, formatted so you can paste it directly into Claude, ChatGPT, or Gemini and get a content strategy without any cleanup work.",
               img: "/AI-ready.png",
               imgAlt: "AI-ready exports feature",
-              lottie: "/AI-ready.json",
+              lottie: `${BASE}/AI-ready.json`,
             },
             {
               tag: "Quick save",
@@ -743,7 +745,7 @@ function Features() {
               body: "Bookmark individual posts or entire profiles from anywhere in the dashboard, and they'll always be just one click away whenever you need to reference them.",
               img: "/Quick save.png",
               imgAlt: "Quick save feature",
-              lottie: "/Quick-save.json",
+              lottie: `${BASE}/Quick-save.json`,
               lottieClass: "w-[80%]",
             },
           ].map((f, i) => (
@@ -1405,7 +1407,7 @@ function HowItWorks() {
     >
       {/* Purple bloom at the section base — same image as the hero */}
       <img
-        src="/hero-blur.png"
+        src={`${BASE}/hero-blur.png`}
         alt=""
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 w-full select-none [filter:hue-rotate(-46deg)]"
@@ -2003,7 +2005,7 @@ function DataPoints() {
         <div
           className="relative w-full rounded-[28px] overflow-hidden flex flex-col pt-12 pb-10"
           style={{
-            backgroundImage: "url('/what-you-get-bg.png')",
+            backgroundImage: `url('${BASE}/what-you-get-bg.png')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -2208,7 +2210,7 @@ function FounderNote() {
           className="aspect-square rounded-2xl overflow-hidden"
         >
           <img
-            src="/Michael.jpeg"
+            src={`${BASE}/Michael.jpeg`}
             alt="Michael Sanchez, founder of SnagPost"
             className="w-full h-full object-cover"
           />
@@ -2324,7 +2326,7 @@ function CTABanner() {
             </div>
             <div className="self-end md:pl-6 md:pt-12">
               <img
-                src="/stop-guessing.png"
+                src={`${BASE}/stop-guessing.png`}
                 alt="Stop guessing, start scraping"
                 width={1671}
                 height={1308}
