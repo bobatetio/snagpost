@@ -139,7 +139,7 @@ function Header() {
 
         <div className="flex items-center gap-3 justify-self-end">
           <a
-            href="#login"
+            href="/login"
             className="hidden sm:inline-flex text-[14px] text-neutral-700 hover:text-neutral-900"
           >
             Sign in
