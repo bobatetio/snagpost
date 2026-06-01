@@ -202,7 +202,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero-bg relative overflow-hidden pt-32 pb-0">
+    <section className="hero-bg relative overflow-hidden pt-32 pb-0" style={{ ["--hero-bg-url" as string]: `url('${BASE}/hero-2.png')` }}>
       <div className="mx-auto max-w-6xl px-5">
         <div className="flex flex-col items-center text-center gap-5">
           <span
