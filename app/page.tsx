@@ -717,7 +717,7 @@ function Features() {
               tag: "Push to dashboard",
               title: "Instantly send any profile you love to your dashboard",
               body: "Export any profile to the dashboard and rank posts by likes, comments, shares, or video plays, so the best-performing content surfaces immediately instead of staying buried.",
-              img: "/Push to dashboard.png",
+              img: `${BASE}/Push to dashboard.png`,
               imgAlt: "Push to dashboard feature",
               lottie: `${BASE}/Push-to-dashboard.json`,
             },
@@ -725,7 +725,7 @@ function Features() {
               tag: "Viral intel",
               title: "Shows you what's going viral across all profiles",
               body: "See which posts blew up far beyond a creator's normal numbers. The Discovery feed pulls outliers from every profile you've tracked, giving you a live window into exactly what Facebook is rewarding right now — updated constantly.",
-              img: "/Viral intel.png",
+              img: `${BASE}/Viral intel.png`,
               imgAlt: "Viral intel feature",
               lottie: `${BASE}/viral-intel.json`,
               lottieClass: "w-[80%]",
@@ -735,7 +735,7 @@ function Features() {
               title: "Exports your data straight\ninto your favourite AI tools",
               titleClass: "whitespace-pre-line",
               body: "Download any profile's post data as JSON, Markdown, or Excel, formatted so you can paste it directly into Claude, ChatGPT, or Gemini and get a content strategy without any cleanup work.",
-              img: "/AI-ready.png",
+              img: `${BASE}/AI-ready.png`,
               imgAlt: "AI-ready exports feature",
               lottie: `${BASE}/AI-ready.json`,
             },
@@ -743,7 +743,7 @@ function Features() {
               tag: "Quick save",
               title: "Saves the profiles and posts you want to revisit",
               body: "Bookmark individual posts or entire profiles from anywhere in the dashboard, and they'll always be just one click away whenever you need to reference them.",
-              img: "/Quick save.png",
+              img: `${BASE}/Quick save.png`,
               imgAlt: "Quick save feature",
               lottie: `${BASE}/Quick-save.json`,
               lottieClass: "w-[80%]",
@@ -1375,24 +1375,24 @@ function ExportIllustration() {
 function HowItWorks() {
   const STEPS = [
     {
-      img: "/step-1.png",
-      doodle: "/doodle-step-1.png",
+      img: `${BASE}/step-1.png`,
+      doodle: `${BASE}/doodle-step-1.png`,
       title: "Install the extension",
       body: "Install free in 30 seconds — any Chromium browser works, no card required.",
       doodleAt: "top" as const,
       doodleAlign: "justify-start",
     },
     {
-      img: "/step-2.png",
-      doodle: "/doodle-step-2.png",
+      img: `${BASE}/step-2.png`,
+      doodle: `${BASE}/doodle-step-2.png`,
       title: "Open Facebook",
       body: "Open Facebook — SnagPost sits quietly in your browser toolbar, always ready.",
       doodleAt: "bottom" as const,
       doodleAlign: "justify-center",
     },
     {
-      img: "/step-3.png",
-      doodle: "/doodle-step-3.png",
+      img: `${BASE}/step-3.png`,
+      doodle: `${BASE}/doodle-step-3.png`,
       title: "Capture any post",
       body: "Click any post to capture it — or sync an entire profile's feed at once.",
       doodleAt: "top" as const,
@@ -1915,7 +1915,7 @@ function WhereItWorks() {
 
           {/* Right column — Lottie */}
           <div className="w-full md:w-[48%] shrink-0 rounded-[28px] overflow-hidden self-stretch">
-            <LottieCard path="/Where it works.json" className="w-full h-full object-cover" />
+            <LottieCard path={`${BASE}/Where it works.json`} className="w-full h-full object-cover" />
           </div>
 
         </div>
